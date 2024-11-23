@@ -24,7 +24,7 @@ export async function sendMail( mailType : string , email : string ) {
 
        
         
-        const verifyToken = await bcrypt.hash(email , 10 ) ;
+        const verifyToken = await bcrypt.hash(email , 10) ;
         
       
         await user.save() ;

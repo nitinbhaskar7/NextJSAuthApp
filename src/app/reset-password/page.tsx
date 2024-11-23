@@ -8,7 +8,11 @@ const page = () => {
     const [isLoader, setisLoader] = useState(false)
     const router = useRouter() ;
     useEffect(() => {
-        const token = window.location.search.split("=")[1] ;
+        let token = window.location.search.split("=")[1] ;
+        // convert from URL to normal string
+        token = decodeURIComponent(token)
+
+
         settoken(token || "")
     }, [])
     
