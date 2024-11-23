@@ -39,7 +39,7 @@ export async function sendMail( mailType : string , email : string ) {
             <h1> Welcome to our app </h1>
             <p> You have successfully signed up to our app </p>
             <p> Please click on the link below to verify your email </p>
-            <a href="http://${process.env.DOMAIN!}/verify?token=${verifyToken}"> Verify Email </a>
+            <a href="${process.env.DOMAIN!}/verify?token=${verifyToken}"> Verify Email </a>
             `
         }
 
@@ -50,7 +50,7 @@ export async function sendMail( mailType : string , email : string ) {
             <h1> Forgot Password </h1>
             <p> You have requested to reset your password </p>
             <p> Please click on the link below to reset your password </p>
-            <a href="http://${process.env.DOMAIN!}/reset-password?token=${verifyToken}"> Reset Password </a>
+            <a href="${process.env.DOMAIN!}/reset-password?token=${verifyToken}"> Reset Password </a>
             `
         }
 
