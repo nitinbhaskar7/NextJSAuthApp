@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.fetch-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.fetch-button:hover {
+    background-color: #0056b3;
+}
+
+.user-details, .placeholder {
+    font-size: 18px;
+    text-align: center;
+}
+
+@keyframes movingColor {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animate-moving-color {
+    background: linear-gradient(270deg, #ff6ec4, #7873f5);
+    background-size: 400% 400%;
+    animation: movingColor 8s ease infinite;
+}
+
+.border-animate {
+    position: relative;
+    padding: 10px;
+}
+
+.border-animate::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(270deg, #ff6ec4, #7873f5);
+    background-size: 400% 400%;
+    animation: movingColor 8s ease infinite;
+    z-index: -1;
+    border-radius: 8px;
+}

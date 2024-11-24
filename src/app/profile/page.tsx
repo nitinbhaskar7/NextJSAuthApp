@@ -13,7 +13,7 @@ const page = ({params} : any) => {
       console.log(error.message)
     }
   }
-  const [user, setuser] = useState(null)
+  const [user, setuser] = useState("")
 
 useEffect(() => {
     const fetchUser = async () => {

@@ -11,7 +11,7 @@ const page = () => {
         let token = window.location.search.split("=")[1] ;
         // convert from URL to normal string
         token = decodeURIComponent(token)
-
+        console.log(token)
 
         settoken(token || "")
     }, [])

@@ -18,7 +18,8 @@ const page = () => {
     const [token, settoken] = useState("");
     useEffect(() => {
         const query = window.location.search.substring(1);
-        const token =  decodeURI(query.split("=")[1]);
+        const token =  decodeURIComponent(query.split("=")[1]);
+        console.log(token);
         settoken(token || "");
     }, [])
     useEffect(() => {

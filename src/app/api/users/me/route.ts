@@ -14,7 +14,9 @@ export async function GET(request : NextRequest){
         }
         const user_id = getTokendata(token.value) ; 
 
-        const user = await User.findById(user_id) ; 
+
+        const user = await User.findById(user_id).select("-password -verifyToken -forgotPasswordToken") ; 
+        
         if(!user){
             return NextResponse.json({message : "User not found"} , {status : 404})
         }
